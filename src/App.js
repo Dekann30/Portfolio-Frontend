@@ -8,9 +8,16 @@ import About from "./pages/About"
 import Projects from './pages/Projects';
 
 function App() {
+  const URL = "https://dk-portfolio-backend.herokuapp.com/"
   return (
     <div className="App">
-      
+      <Header />
+      <Routes>
+        <Route path ='/' element={<Home />} />
+        <Route path='/projects' element={<Projects URL={URL}/>} />
+        <Route path='/about' element={<About URL={URL}/>} />
+      </Routes>
+      <Footer />
     </div>
   );
 }
