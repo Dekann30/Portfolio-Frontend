@@ -10,6 +10,7 @@ const About = function (props){
         setAbout(data)
     }
 
+    // eslint-disable-next-line react-hooks/exhaustive-deps
     useEffect(()=> {getAbout()},[])
 
     const loaded = () =>(
