@@ -1,6 +1,19 @@
 import {useState, useEffect} from 'react'
 
 const Projects = function (props){
+    const divStyle={
+        display: 'flex',
+        flexDirection: 'column',
+        justifyContent: 'center',
+        alignItems: 'center',
+        paddingBottom: '15px',
+        color: "#330066",
+    }
+
+    const imgStyle={
+        borderRadius: "10px",
+        height: '300px'
+    }
 
     const [projects, setProjects] = useState()
 
@@ -15,9 +28,9 @@ const Projects = function (props){
 
     const loaded = ()=>{
         return (projects.map((project) =>(
-            <div>
+            <div style={divStyle}>
                 <h1>{project.name}</h1>
-                <img src={project.image} alt={project.name} />
+                <img style={imgStyle} src={project.image} alt={project.name} />
                 <a href={project.git}> 
                     <button>Github</button>
                 </a>

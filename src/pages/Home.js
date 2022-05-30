@@ -6,7 +6,8 @@ const Home = function (props){
 
     const imgStyle={
         borderRadius: "10px",
-        height: '300px'
+        height: '300px',
+        marginTop: '30px'
     }
 
     return (
